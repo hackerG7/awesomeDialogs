@@ -35,7 +35,6 @@ enum DismissType {
 
 class AwesomeDialog {
   /// [@required]
-  final BuildContext context;
 
   /// Dialog Type can be INFO, WARNING, ERROR, SUCCES, NO_HEADER
   final DialogType dialogType;
@@ -176,7 +175,6 @@ class AwesomeDialog {
   ///
   /// Returns null if [autoDismiss] is true, else returns data passed to custom [Navigator.pop] function
   AwesomeDialog({
-    required this.context,
     this.dialogType = DialogType.INFO,
     this.customHeader,
     this.title,
@@ -373,7 +371,7 @@ class AwesomeDialog {
   /// or calls the [onDissmissCallback] function if [autoDismiss] is `false`
   void dismiss() {
     if (autoDismiss) {
-      Navigator.of(context, rootNavigator: useRootNavigator).pop();
+      OneContext.instance.navigatorOf(rootNavigator: useRootNavigator).pop();
     }
     onDissmissCallback?.call(_dismissType);
     _onDissmissCallbackCalled = true;

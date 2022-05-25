@@ -45,7 +45,6 @@ class _HomePageState extends State<HomePage> {
                   text: 'Info Dialog fixed width and square buttons',
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.INFO_REVERSED,
                       borderSide: const BorderSide(
                         color: Colors.green,
@@ -81,7 +80,6 @@ class _HomePageState extends State<HomePage> {
                   text: 'Question Dialog With Custom BTN Style',
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.QUESTION,
                       headerAnimationLoop: false,
                       animType: AnimType.BOTTOMSLIDE,
@@ -101,7 +99,6 @@ class _HomePageState extends State<HomePage> {
                   text: 'Info Dialog Without buttons',
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       headerAnimationLoop: true,
                       animType: AnimType.BOTTOMSLIDE,
                       title: 'INFO',
@@ -118,7 +115,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.orange,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.WARNING,
                       headerAnimationLoop: false,
                       animType: AnimType.TOPSLIDE,
@@ -143,7 +139,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.red,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.ERROR,
                       animType: AnimType.RIGHSLIDE,
                       headerAnimationLoop: true,
@@ -164,7 +159,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.green,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       animType: AnimType.LEFTSLIDE,
                       headerAnimationLoop: false,
                       dialogType: DialogType.SUCCES,
@@ -190,7 +184,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.cyan,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       headerAnimationLoop: false,
                       dialogType: DialogType.NO_HEADER,
                       title: 'No Header',
@@ -211,7 +204,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blueGrey,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       animType: AnimType.SCALE,
                       dialogType: DialogType.INFO,
                       body: const Center(
@@ -233,7 +225,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.purple,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.INFO,
                       animType: AnimType.SCALE,
                       title: 'Auto Hide Dialog',
@@ -250,7 +241,6 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.orange,
                   pressEvent: () {
                     AwesomeDialog(
-                      context: context,
                       keyboardAware: true,
                       dismissOnBackKeyPress: false,
                       dialogType: DialogType.WARNING,
@@ -275,7 +265,6 @@ class _HomePageState extends State<HomePage> {
                   pressEvent: () {
                     late AwesomeDialog dialog;
                     dialog = AwesomeDialog(
-                      context: context,
                       animType: AnimType.SCALE,
                       dialogType: DialogType.INFO,
                       keyboardAware: true,
@@ -344,7 +333,6 @@ class _HomePageState extends State<HomePage> {
                   text: 'Passing Data Back from Dialog',
                   pressEvent: () async {
                     final dismissMode = await AwesomeDialog(
-                      context: context,
                       dialogType: DialogType.NO_HEADER,
                       buttonsBorderRadius: const BorderRadius.all(
                         Radius.circular(2),
