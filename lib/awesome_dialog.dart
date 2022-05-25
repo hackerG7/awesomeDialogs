@@ -2,6 +2,7 @@ library awesome_dialog;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:one_context/one_context.dart';
 
 import 'src/animated_button.dart';
 import 'src/anims/anims.dart';
@@ -232,11 +233,9 @@ class AwesomeDialog {
   /// Shows the dialog using the [showDialog] function
   ///
   /// Returns `null` if [autoDismiss] is true, else returns data passed to custom [Navigator.pop] function
-  Future<dynamic> show() => showDialog(
-        context: context,
+  Future<dynamic> show() => OneContext.instance.showDialog(
         useRootNavigator: useRootNavigator,
         barrierDismissible: dismissOnTouchOutside,
-        barrierColor: barrierColor,
         builder: (BuildContext context) {
           if (autoHide != null) {
             Future<void>.delayed(autoHide!).then(
